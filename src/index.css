@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+  }
+}
+
+/* High contrast mode toggle helper */
+.high-contrast-mode {
+  --color-bg-primary: #000000;
+  --color-text-primary: #ffffff;
+  --color-border-primary: #ffffff;
+}
+
+.high-contrast-mode body,
+.high-contrast-mode main,
+.high-contrast-mode header,
+.high-contrast-mode footer,
+.high-contrast-mode section,
+.high-contrast-mode article,
+.high-contrast-mode aside,
+.high-contrast-mode nav {
+  background-color: #050811 !important;
+  color: #ffffff !important;
+  border-color: #475569 !important;
+}
+
+.high-contrast-mode a {
+  color: #38bdf8 !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast-mode p,
+.high-contrast-mode span,
+.high-contrast-mode li {
+  color: #f1f5f9 !important;
+}
+
+/* Dyslexia / Extra text spacing option (WCAG 1.4.12 Text Spacing) */
+.accessible-text-spacing {
+  line-height: 1.8 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+
+.accessible-text-spacing p,
+.accessible-text-spacing li,
+.accessible-text-spacing h1,
+.accessible-text-spacing h2,
+.accessible-text-spacing h3,
+.accessible-text-spacing h4 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Semantic Landmark Inspection Mode styling */
+.semantic-inspect-active header {
+  position: relative;
+  outline: 2px dashed #0284c7 !important;
+  outline-offset: 2px;
+}
+
+.semantic-inspect-active nav {
+  position: relative;
+  outline: 2px dashed #059669 !important;
+  outline-offset: 2px;
+}
+
+.semantic-inspect-active main {
+  position: relative;
+  outline: 2px dashed #d97706 !important;
+  outline-offset: 2px;
+}
+
+.semantic-inspect-active section {
+  position: relative;
+  outline: 1.5px dashed #6366f1 !important;
+  outline-offset: 1px;
+}
+
+.semantic-inspect-active article {
+  position: relative;
+  outline: 1.5px dashed #ec4899 !important;
+  outline-offset: 1px;
+}
+
+.semantic-inspect-active aside {
+  position: relative;
+  outline: 1.5px dashed #8b5cf6 !important;
+  outline-offset: 1px;
+}
+
+.semantic-inspect-active footer {
+  position: relative;
+  outline: 2px dashed #dc2626 !important;
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility class fallback */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus,
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.25rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
